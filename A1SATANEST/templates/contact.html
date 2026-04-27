@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | A1SATANEST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body data-page="contact">
+    <header class="site-header glass">
+        <a class="brand" href="/"><img class="brand-logo" src="{{ url_for('static', filename='a1datanest_logo.png') }}" alt="A1SATANEST Logo" /></a>
+        <nav class="nav-links">
+            <a class="nav-item" data-icon="⌂" href="/">Home</a>
+            <a class="nav-item" data-icon="🛠" href="/booking">Book Repair</a>
+            <a class="nav-item" data-icon="⌨" href="/products">Accessories</a>
+            <a class="nav-item" data-icon="❓" href="/support">Support</a>
+            <a class="nav-item active" data-icon="✉" href="/contact">Contact</a>
+            <a class="nav-item" data-icon="👤" href="/customer/login">My Account</a>
+            <a href="/admin">Admin</a>
+        </nav>
+        <button id="mobileMenuBtn" class="menu-btn">Menu</button>
+    </header>
+
+    <main class="wrap section contact-layout">
+        <section class="glass support-hero">
+            <h1>Let’s Connect with A1SATANEST</h1>
+            <p>Need support, have a business requirement, or want to partner with us? Send us a message and we will get back quickly.</p>
+            <div class="mini-stats">
+                <article><strong>&lt; 30 min</strong><span>Business query reply</span></article>
+                <article><strong>Mon-Sun</strong><span>9:00 AM to 9:00 PM</span></article>
+                <article><strong>Pan India</strong><span>Service expansion in progress</span></article>
+            </div>
+        </section>
+
+        <section class="contact-grid">
+            <article class="glass quick-card">
+                <h3>Contact Channels</h3>
+                <ul>
+                    <li>Main Support: +91 90XX-XXX-001</li>
+                    <li>WhatsApp: +91 90XX-XXX-002</li>
+                    <li>General Email: care@a1satanest.com</li>
+                    <li>Partnerships: partners@a1satanest.com</li>
+                </ul>
+                <div class="support-note">
+                    <h4>Head Office</h4>
+                    <p>Sector V, Salt Lake, Kolkata, West Bengal, India.</p>
+                </div>
+            </article>
+
+            <article class="glass quick-card">
+                <h3>Send a Message</h3>
+                <p class="muted">For support, franchise, partnerships, bulk procurement, or media enquiries.</p>
+                <form id="contactForm" class="form-grid">
+                    <input name="full_name" required placeholder="Full Name" />
+                    <input name="email" type="email" required placeholder="Email Address" />
+                    <input name="phone" placeholder="Phone Number (optional)" />
+                    <input name="city" placeholder="City (optional)" />
+                    <select name="inquiry_type" required>
+                        <option value="">Select Inquiry Type</option>
+                        <option>General Support</option>
+                        <option>Business Partnership</option>
+                        <option>Corporate AMC</option>
+                        <option>Bulk Parts Purchase</option>
+                        <option>Media & Press</option>
+                    </select>
+                    <textarea name="message" required placeholder="Tell us how we can help"></textarea>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
+                <p id="contactMessage" class="message"></p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+
+
